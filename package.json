@@ -1,0 +1,41 @@
+{
+  "name": "ng-gc-dialog-directive",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gocardless-ng/ng-gc-dialog-directive.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-ddescribe-iit": "~0.0.2",
+    "matchdep": "~0.1.2",
+    "grunt-karma": "git://github.com/harrison/grunt-karma.git",
+    "karma": "~0.11.0",
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "karma-coverage": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-sauce-launcher": "~0.1.0",
+    "karma-opera-launcher": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-growl-reporter": "~0.1.1",
+    "karma-junit-reporter": "~0.1.0",
+    "grunt-angular-template": "git://github.com/gocardless-client/grunt-angular-template.git"
+  },
+  "scripts": {
+    "test": "grunt citest"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}

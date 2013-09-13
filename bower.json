@@ -1,0 +1,24 @@
+{
+  "name": "ng-gc-dialog-directive",
+  "version": "0.1.0",
+  "main": "ng-gc-dialog-directive.js",
+  "dependencies": {
+    "bower-angular": "git@github.com:angular/bower-angular.git#v1.2.0-rc.2"
+  },
+  "devDependencies": {
+    "bower-angular-mocks": "git@github.com:angular/bower-angular-mocks.git#v1.2.0-rc.2",
+    "jasmine-helpers": "git@github.com:gocardless/jasmine-helpers.git",
+    "jquery": "~2.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "src",
+    "*.spec.js",
+    "node_modules",
+    "components",
+    "package.json",
+    "Gruntfile.js",
+    "readme.md",
+    "karma.conf.js"
+  ]
+}
