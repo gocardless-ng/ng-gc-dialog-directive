@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('gc.dialogController', [])
-.controller('DialogController',
-  ['$scope', '$element', '$attrs', '$location',
+.controller('DialogController', [
+  '$scope', '$element', '$attrs', '$location',
   function DialogController($scope, $element, $attrs, $location) {
 
     // Creates an element and appends it to the body

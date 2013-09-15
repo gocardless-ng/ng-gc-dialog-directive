@@ -25,6 +25,8 @@ module.exports = function(config) {
       // Specs helpers
       'components/jasmine-helpers/*.js',
 
+      'components/dialog.js/dialog.js',
+
       // app & specs
       'src/**/*.js',
 

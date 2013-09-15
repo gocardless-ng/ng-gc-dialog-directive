@@ -1,9 +1,7 @@
 'use strict';
 
 describe('DialogDirective', function() {
-
   beforeEach(module('gc.dialog'));
-  beforeEach(module('app/shared/components/dialog/dialog-template.html'));
 
   var elm, dialogElm, scope, location, elmScope, backdrop;
 
