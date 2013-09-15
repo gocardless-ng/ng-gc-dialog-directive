@@ -3,7 +3,11 @@
  * (c) 2013-2013 GoCardless, Ltd.
  * https://github.com/gocardless-ng/ng-gc-dialog-directive.git
  * License: MIT
- */'use strict';
+ */
+(function(){
+'use strict';
+
+'use strict';
 
 angular.module('gc.backdrop', [])
 .directive('backdrop', [
@@ -24,8 +28,8 @@ angular.module('gc.backdrop', [])
 'use strict';
 
 angular.module('gc.dialogController', [])
-.controller('DialogController',
-  ['$scope', '$element', '$attrs', '$location',
+.controller('DialogController', [
+  '$scope', '$element', '$attrs', '$location',
   function DialogController($scope, $element, $attrs, $location) {
 
     // Creates an element and appends it to the body
@@ -62,7 +66,9 @@ angular.module('gc.dialogController', [])
     $scope.$on('$destroy', function dialogDestroy(){
       $scope.dialog.remove();
     });
-  }]);
+  }
+
+]);
 
 'use strict';
 
@@ -153,12 +159,13 @@ angular.module('gc.dialogHandler', [])
   }
 ]);
 
-angular.module('dialog-empty-template.html', []).run(function($templateCache) {
+angular.module('dialog-empty-template.html', []).run(['$templateCache', function($templateCache) {
   $templateCache.put('dialog-empty-template.html',
     '<div class="dialog__inner dialog__inner--empty" ng-transclude=""></div>');
-});
+}]);
 
-angular.module('dialog-template.html', []).run(function($templateCache) {
+angular.module('dialog-template.html', []).run(['$templateCache', function($templateCache) {
   $templateCache.put('dialog-template.html',
     '<div class="dialog-wrapper"><div class="dialog__header center-header"><div class="center-header__side"><button class="dialog__header__close btn btn--small btn--hollow" ng-click="hideDialog()">{{ cancelText || \'Cancel\' }}</button></div><div class="center-header__title"><h1 class="dialog__header__title u-text-h4" id="dialog-title">{{ title }}</h1></div><div class="center-header__side"></div></div><div class="dialog__inner" ng-transclude=""></div></div>');
-});
+}]);
+})();

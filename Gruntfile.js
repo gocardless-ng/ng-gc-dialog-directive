@@ -21,6 +21,12 @@ module.exports = function(grunt) {
     config: config,
     pkg: require('./package.json'),
     bower: require('./bower.json'),
+    banner: '/**\n' +
+      ' * @license <%= pkg.name %> v<%= pkg.version %>\n' +
+      ' * (c) 2013-<%= grunt.template.today("yyyy") %> GoCardless, Ltd.\n' +
+      ' * <%= pkg.repository.url %>\n' +
+      ' * License: MIT\n' +
+      ' */\n',
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -73,12 +79,10 @@ module.exports = function(grunt) {
     concat: {
       options: {
         stripBanners: true,
-        banner: '/**\n' +
-          ' * @license <%= pkg.name %> v<%= pkg.version %>\n' +
-          ' * (c) 2013-<%= grunt.template.today("yyyy") %> GoCardless, Ltd.\n' +
-          ' * <%= pkg.repository.url %>\n' +
-          ' * License: MIT\n' +
-          ' */',
+        banner: '<%= banner %>' +
+          '(function(){\n' +
+          '\'use strict\';\n\n',
+        footer: '})();'
       },
       build: {
         src: ['<%= config.build %>/*.js'],
@@ -121,6 +125,9 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
       dist: {
         files: {
           '<%= bower.name %>.min.js': ['<%= bower.main %>']
