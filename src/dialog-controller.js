@@ -39,4 +39,6 @@ angular.module('gc.dialogController', [])
     $scope.$on('$destroy', function dialogDestroy(){
       $scope.dialog.remove();
     });
-  }]);
+  }
+
+]);
