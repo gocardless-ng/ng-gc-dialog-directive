@@ -33,6 +33,7 @@
     "grunt-angular-template": "git://github.com/gocardless-client/grunt-angular-template.git"
   },
   "scripts": {
+    "postinstall": "bower install",
     "test": "grunt citest"
   },
   "engines": {
